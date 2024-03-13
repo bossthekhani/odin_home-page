@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --white: #faf9f6;
+  --blue: #4676ac;
+  --gray: #e2ddd2;
+  --black: #28282b;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: var(--black);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--gray);
+}
+
+/* ------------------------------------------------------------------------
+                    HEADER
+--------------------------------------------------------------------------*/
+
+header {
+  padding: 0 10px;
+  padding-bottom: 50px;
+  background: linear-gradient(330deg, var(--gray) 55%, var(--blue) 1%);
+  position: relative;
+}
+
+.header-img-container {
+  position: relative;
+  padding: 25px;
+}
+
+.header-img-container > p {
+  position: absolute;
+  font-size: 2.5rem;
+  font-family: "Alkatra", Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: var(--gray);
+  text-shadow: 0 5px 5px var(--black);
+  bottom: 5%;
+  left: 12%;
+  letter-spacing: 5px;
+  line-height: 120%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+}
+.corner-sqr {
+  display: none;
+}
+
+.about-me-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.icons {
+  width: 30px;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------------
+                    MAIN
+--------------------------------------------------------------------------*/
+
+main {
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project {
+  flex: 0 1 275px;
+  border-radius: 2%;
+  overflow: hidden;
+  box-shadow: 0 5px 10px var(--blue);
+}
+
+.project h3 {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.project-desc {
+  padding: 15px;
+}
+
+.project-desc > div {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px;
+}
+.project-desc img {
+  width: 25px;
+  height: auto;
+}
+
+.project-desc h3 {
+  margin-right: auto;
+}
+
+/* ------------------------------------------------------------------------
+                    FOOTER
+--------------------------------------------------------------------------*/
+footer {
+  background-color: var(--blue);
+  color: var(--gray);
+  padding-top: 40px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+.contact-details a{
+  text-decoration: none;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------
+                    MEDIA QUERIES
+--------------------------------------------------------------------------*/
+
+@media screen and (min-width: 624px) {
+  header {
+    min-height: 500px;
+    background: linear-gradient(345deg, var(--gray) 40%, var(--blue) 10%);
+  }
+
+  .header-img-container {
+    max-width: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-95%, -70%);
+    z-index: 1;
+    position: absolute;
+  }
+  .header-img-container > p {
+    white-space: nowrap;
+    top: 10%;
+    left: 75%;
+    z-index: 1;
+  }
+  .about-me {
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 500px;
+    box-shadow: 0 0 20px var(--black);
+    background-color: var(--gray);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .about-me-heading {
+    text-align: right;
+    padding-right: 50px;
+  }
+
+  .corner-sqr {
+    visibility: hidden;
+    display: inline;
+    width: 230px;
+    height: 160px;
+    float: left;
+  }
+
+  .about-me-icons {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  .footer-img-box {
+    max-width: 350px;
+  }
+}
